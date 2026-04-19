@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Stone Paper Scissors</title>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            background: linear-gradient(to right, #27e12d, #00f2fe);
+            color: white;
+        }
+
+        h1 {
+            margin-top: 30px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: white;
+            color: black;
+        }
+
+        button:hover {
+            background-color: #ddd;
+        }
+
+        .result {
+            margin-top: 20px;
+            font-size: 20px;
+        }
+
+        .score {
+            margin-top: 10px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>STONE PAPER SCISSORS</h1>
+
+<button onclick="play('stone')">Stone</button>
+<button onclick="play('paper')">Paper</button>
+<button onclick="play('scissors')">Scissors</button>
+
+<div class="result" id="result"></div>
+<div class="score" id="score">You: 0 | Computer: 0</div>
+
+<script>
+    let your_score = 0;
+    let my_score = 0;
+
+    function play(your) {
+        let choices = ["stone", "paper", "scissors"];
+        let my = choices[Math.floor(Math.random() * 3)];
+
+        let resultText = "Computer chose: " + my + "<br>";
+
+        if (your === my) {
+            resultText += "It's a Tie!";
+        }
+        else if (
+            (your === "stone" && my === "scissors") ||
+            (your === "paper" && my === "stone") ||
+            (your === "scissors" && my === "paper")
+        ) {
+            resultText += "You Win!";
+            your_score++;
+        }
+        else {
+            resultText += "Computer Wins!";
+            my_score++;
+        }
+
+        document.getElementById("result").innerHTML = resultText;
+        document.getElementById("score").innerHTML =
+            "You: " + your_score + " | Computer: " + my_score;
+    }
+</script>
+
+</body>
+</html>
