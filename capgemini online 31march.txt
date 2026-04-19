@@ -1,0 +1,164 @@
+Python 3.13.12 (tags/v3.13.12:1cbe481, Feb  3 2026, 18:22:25) [MSC v.1944 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> #for loop
+>>>  #syntax:- for varable in colection:
+...  #statement block
+...  #for is self interative loop
+...  for i in range (1,6,1):
+...   print(i)
+...
+  File "<python-input-1>", line 4
+    for i in range (1,6,1):
+IndentationError: unexpected indent
+>>> #wap to check wheater the str is palindrome or not without using slicig
+>>> s = input("Enter the str")
+Enter the strMADAM
+>>> rev=""
+>>> for i in s:
+...  rev= i+rev
+...  if rev==s:
+...   print("palindrome")
+...  else:
+...   print("not palindrome")
+...
+not palindrome
+not palindrome
+not palindrome
+not palindrome
+palindrome
+>>>  #wap to replace space by underscore in a given string
+>>> st = input("Enter a string")
+Enter a string Shubham goyal 5143
+>>> i = ''
+>>> for a in st:
+...  if a ==' ':
+...   i+='_'
+...  else:
+...   i+=a
+... print(i)
+...
+_Shubham_goyal_5143
+>>> #wap to remove your duplicate values from the list
+>>> l = [1,1,2,3,4,3,4,5]
+>>> ls=[]
+>>> for b in l:
+...  if b not in ls:
+...   ls+=[b]
+... print(l)
+...
+[1, 1, 2, 3, 4, 3, 4, 5]
+>>> for b in l:
+...  if b not in ls:
+...   ls+=[b]
+... print(ls)
+...
+[1, 2, 3, 4, 5]
+>>> #input = [12, 3.4,'hello',2+3j,'python','bye',false]
+>>> #output = {'hello':'ho','python':'pn','bye':'be'}
+>>> # input list
+... data = [12, 3.4, 'hello', 2+3j, 'python', 'bye', False]
+... result = {}
+... for it in data:
+...     if type(it)==str:
+...         result[it]=it[0]+it[-1]
+... print(result)
+...
+{'hello': 'ho', 'python': 'pn', 'bye': 'be'}
+>>> data = [12, 3.4, 'hello', 2+3j, 'python', 'bye', False]
+... result = {}
+... i = 0
+... while i < len(data):
+...     if type(data[i]) == str:
+...         s = data[i]
+...         value = s[0]+s[-1]
+...         result[s]=value
+...     i += 1
+... print(result)
+...
+{'hello': 'ho', 'python': 'pn', 'bye': 'be'}
+>>>
+... data = [12, 3.4, 'hello', 2+3j, 'python', 'bye', False]
+... result = {}
+... for it in data:
+...     if type(it)==str:
+...         result[it]=len(it)
+... print(result)
+...
+{'hello': 5, 'python': 6, 'bye': 3}
+>>> #input : 'aPple#123'
+>>> #output: {'a':'A','P':'p','p':'P','l':'L','e':'E'}
+>>>  s = 'aPple#123'
+...  result = {}
+...  for ch in s:
+...      if ('a' <= ch <= 'z'):
+...          if 'a' <= ch <= 'z':
+...              result[ch] = chr(ord(ch) - 32)
+...          elif ('A'<= ch <= 'Z'):
+...              result[ch] = chr(ord(ch) + 32)
+... print(result)
+...
+  File "<python-input-22>", line 1
+    s = 'aPple#123'
+IndentationError: unexpected indent
+>>>  s = 'aPple#123'
+...  result = {}
+...  for ch in s:
+...      if ('a' <= ch <= 'z') or ('A' <= ch <= 'Z'):
+...          if 'a' <= ch <= 'z':
+...              result[ch] = chr(ord(ch) - 32)
+...          else:
+...              result[ch] = chr(ord(ch) + 32)
+... print(result)
+...
+  File "<python-input-23>", line 1
+    s = 'aPple#123'
+IndentationError: unexpected indent
+>>> s = 'aPple#123'
+... result = {}
+... for ch in s:
+...     if ('a' <= ch <= 'z') or ('A' <= ch <= 'Z'):
+...         if 'a' <= ch <= 'z':
+...             result[ch] = chr(ord(ch) - 32)
+...         else:
+...             result[ch] = chr(ord(ch) + 32)
+... print(result)
+...
+{'a': 'A', 'P': 'p', 'p': 'P', 'l': 'L', 'e': 'E'}
+>>> #input:'abcabacbcbc'
+>>> #output: 'a3b4c4'
+>>> s = 'abcabacbcbc'
+... r= ""
+... v= ""
+... for ch in s:
+...     if ch not in v:
+...         c = 0
+...         for x in s:
+...             if x == ch:
+...                 c += 1
+...         r+=ch+str(c)
+...         v+= ch
+... print(r)
+...
+a3b4c4
+>>> #wap to check wheater the number is strong or not
+>>> n= int(input('Enter a value'))
+Enter a value 145
+>>> sum = 0
+>>>  a = str(n)
+  File "<python-input-31>", line 1
+    a = str(n)
+IndentationError: unexpected indent
+>>> a = str(n)
+>>> for i in a:
+...     num = int(i)
+...     fact=1
+...     for i in range(num,0,-1):
+...         fact*=i
+...     sum+=fact
+... if sum==n:
+...     print('strong')
+... else:
+...     print('Not a strong')
+...
+strong
+>>>

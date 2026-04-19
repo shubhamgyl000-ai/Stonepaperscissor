@@ -1,0 +1,151 @@
+Python 3.13.12 (tags/v3.13.12:1cbe481, Feb  3 2026, 18:22:25) [MSC v.1944 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> a = "shubham"
+>>> a[0:3+1:1]
+'shub'
+>>> a = Python is Lovely
+Traceback (most recent call last):
+  File "<python-input-2>", line 1, in <module>
+    a = Python is Lovely
+        ^^^^^^
+NameError: name 'Python' is not defined
+>>> a = "Python is Lovely"
+>>> a[0:6+1:1]
+'Python '
+>>> a[7:9+1:1]
+'is '
+>>> a[7:10+1:1]
+'is L'
+>>> a[-3:-6-1:1]
+''
+>>> a[-3:-6-1:-1]
+'evoL'
+>>> a[-10:-16-1:-1]
+' nohtyP'
+>>> a[-11:-16-1:-1]
+'nohtyP'
+>>> name1="A"
+>>> 1name="B"
+  File "<python-input-12>", line 1
+    1name="B"
+    ^
+SyntaxError: invalid decimal literal
+>>> _1name="B"
+>>> name1 + _1name
+'AB'
+>>> import keyword
+>>> print(keyword)
+<module 'keyword' from 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3312.0_x64__qbz5n2kfra8p0\\Lib\\keyword.py'>
+>>> print(keyword)
+<module 'keyword' from 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3312.0_x64__qbz5n2kfra8p0\\Lib\\keyword.py'>
+>>> for
+  File "<python-input-18>", line 1
+    for
+       ^
+SyntaxError: invalid syntax
+>>> print(for)
+  File "<python-input-19>", line 1
+    print(for)
+          ^^^
+SyntaxError: invalid syntax
+>>> type(for)
+  File "<python-input-20>", line 1
+    type(for)
+         ^^^
+SyntaxError: invalid syntax
+>>> bool(for)
+  File "<python-input-21>", line 1
+    bool(for)
+         ^^^
+SyntaxError: invalid syntax
+>>> total_marks = 90
+>>> class = 10
+  File "<python-input-23>", line 1
+    class = 10
+          ^
+SyntaxError: invalid syntax
+>>> a = 10
+>>> b = a
+>>> a =50
+>>> print(a,b)
+50 10
+>>> a,b,c = 5,10,15
+>>> a,b = b,a
+>>> print(a,b,c)
+10 5 15
+>>> a= 10
+>>> b = 10.5
+>>> c = 2+3j
+>>> d = False
+>>> type(a,b,c,d)
+Traceback (most recent call last):
+  File "<python-input-35>", line 1, in <module>
+    type(a,b,c,d)
+    ~~~~^^^^^^^^^
+TypeError: type() takes 1 or 3 arguments
+>>> type(a)
+<class 'int'>
+>>> type(b)
+<class 'float'>
+>>> type(c)
+<class 'complex'>
+>>> type(d)
+<class 'bool'>
+>>> print(bool(0), bool(100),bool(""))
+False True False
+>>> z = 5 + 7j
+>>> print(real)
+Traceback (most recent call last):
+  File "<python-input-42>", line 1, in <module>
+    print(real)
+          ^^^^
+NameError: name 'real' is not defined
+>>> type(z)
+<class 'complex'>
+>>> z.real
+5.0
+>>> z.imganiary
+Traceback (most recent call last):
+  File "<python-input-45>", line 1, in <module>
+    z.imganiary
+AttributeError: 'complex' object has no attribute 'imganiary'
+>>> z.img
+Traceback (most recent call last):
+  File "<python-input-46>", line 1, in <module>
+    z.img
+AttributeError: 'complex' object has no attribute 'img'. Did you mean: 'imag'?
+>>> z.imag
+7.0
+>>> type(z)
+<class 'complex'>
+>>> s = "Python"
+>>> -s[0]
+Traceback (most recent call last):
+  File "<python-input-50>", line 1, in <module>
+    -s[0]
+TypeError: bad operand type for unary -: 'str'
+>>> print(-s[0],s[-1],s[-3])
+Traceback (most recent call last):
+  File "<python-input-51>", line 1, in <module>
+    print(-s[0],s[-1],s[-3])
+          ^^^^^
+TypeError: bad operand type for unary -: 'str'
+>>> print(s[0],s[-1],s[-3])
+P n h
+>>> s = "DataScience"
+>>> s[0:4+1:1]
+'DataS'
+>>> s[0:3+1:1]
+'Data'
+>>> s[4:11+1:1]
+'Science'
+>>> s[-1:-12:-1]
+'ecneicSataD'
+>>> s = "Hello"
+>>> s[10]
+Traceback (most recent call last):
+  File "<python-input-59>", line 1, in <module>
+    s[10]
+    ~^^^^
+IndexError: string index out of range
+>>>

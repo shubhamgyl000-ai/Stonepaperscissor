@@ -1,0 +1,221 @@
+Python 3.13.12 (tags/v3.13.12:1cbe481, Feb  3 2026, 18:22:25) [MSC v.1944 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> l = [12,'Program',4+2j,false,'Holiday']
+Traceback (most recent call last):
+  File "<python-input-0>", line 1, in <module>
+    l = [12,'Program',4+2j,false,'Holiday']
+                           ^^^^^
+NameError: name 'false' is not defined. Did you mean: 'False'?
+>>> l = [12,'Program',4+2j,False,'Holiday']
+>>> a ={}
+>>> for i in l :
+...     if b in 'aeiouAIEOU':
+...         print(b)
+...
+Traceback (most recent call last):
+  File "<python-input-3>", line 2, in <module>
+    if b in 'aeiouAIEOU':
+       ^
+NameError: name 'b' is not defined
+>>> for i in l :
+...     if type(i)=str():
+...         print(b)
+...
+  File "<python-input-4>", line 2
+    if type(i)=str():
+       ^^^^^^^
+SyntaxError: cannot assign to function call here. Maybe you meant '==' instead of '='?
+>>> for i in l :
+...     if type(i)==str():
+...         v=''
+...         for b in i:
+...             if b in 'aieouAIEOU':
+...                 v+=b
+...         out[i]=v
+...
+>>>
+>>> for i in l :
+...     if type(i)==str():
+...         v=''
+...         for b in i:
+...             if b in 'aieouAIEOU':
+...                 v+=b
+...         a[i]=v
+... print(a)
+...
+{}
+>>> for i in l :
+...     if type(i)==str():
+...         v=''
+...         for b in i:
+...             if b in 'aieouAIEOU':
+...                 v+=b
+...          a[i]=v
+... print(a)
+...
+  File "<python-input-8>", line 7
+    a[i]=v
+          ^
+IndentationError: unindent does not match any outer indentation level
+>>> for i in l :
+...     if type(i)==str:
+...         v=''
+...         for b in i:
+...             if b in 'aieouAIEOU':
+...                 v+=b
+...          a[i]=v
+... print(a)
+...
+  File "<python-input-9>", line 7
+    a[i]=v
+          ^
+IndentationError: unindent does not match any outer indentation level
+>>> for i in l :
+...     if type(i)==str:
+...         v=''
+...         for b in i:
+...             if b in 'aieouAIEOU':
+...                 v+=b
+...         a[i]=v
+... print(a)
+...
+{'Program': 'oa', 'Holiday': 'oia'}
+>>> #function-the predefined by the developers
+>>> #2types - user defined and inbuilt
+>>> #in built fxn of -dictionary:
+>>> #key
+>>> #key(),values(),items(),pop(),popitem(),clear()
+>>> a={'a':10,'b':20,'c':30}
+>>> a.keys()
+dict_keys(['a', 'b', 'c'])
+>>> a.value()
+Traceback (most recent call last):
+  File "<python-input-18>", line 1, in <module>
+    a.value()
+    ^^^^^^^
+AttributeError: 'dict' object has no attribute 'value'. Did you mean: 'values'?
+>>> a.values()
+dict_values([10, 20, 30])
+>>> a.items()
+dict_items([('a', 10), ('b', 20), ('c', 30)])
+>>> a.pop()
+Traceback (most recent call last):
+  File "<python-input-21>", line 1, in <module>
+    a.pop()
+    ~~~~~^^
+TypeError: pop expected at least 1 argument, got 0
+>>> a.popitem()
+('c', 30)
+>>> a.pop(1)
+Traceback (most recent call last):
+  File "<python-input-23>", line 1, in <module>
+    a.pop(1)
+    ~~~~~^^^
+KeyError: 1
+>>> a.pop("a")
+10
+>>>  #2types - user defined and inbuilt
+>>> a.clear()
+>>> a.update()
+>>> a
+{}
+>>> a.update('a':10)
+  File "<python-input-29>", line 1
+    a.update('a':10)
+                ^
+SyntaxError: invalid syntax
+>>> def add():
+...     a =int(input())
+...     b =int(input())
+...     print(a+b)
+...
+>>> add()
+
+Traceback (most recent call last):
+  File "<python-input-31>", line 1, in <module>
+    add()
+    ~~~^^
+  File "<python-input-30>", line 2, in add
+    a =int(input())
+ValueError: invalid literal for int() with base 10: ''
+>>> add()
+
+Traceback (most recent call last):
+  File "<python-input-32>", line 1, in <module>
+    add()
+    ~~~^^
+  File "<python-input-30>", line 2, in add
+    a =int(input())
+ValueError: invalid literal for int() with base 10: ''
+>>> def add():
+...     a =int(input(""ENter1""))
+...     b =int(input("enter2"))
+...     print(a+b)
+...
+  File "<python-input-33>", line 2
+    a =int(input(""ENter1""))
+                 ^^^^^^^^
+SyntaxError: invalid syntax. Perhaps you forgot a comma?
+>>> def add():
+...     a =int(input("ENter1"))
+...     b =int(input("enter2"))
+...     print(a+b)
+...
+>>> add()
+ENter112
+enter223
+35
+>>> def up():
+...     st=input('enter a st')
+...     out=''
+...     for i in s:
+...         if 'a'<=i<='z':
+...             out+=chr(ord(i)-32)
+...         else:
+...             out+=i
+...     print(out)
+...
+>>> up()
+enter a stshubham
+Traceback (most recent call last):
+  File "<python-input-37>", line 1, in <module>
+    up()
+    ~~^^
+  File "<python-input-36>", line 4, in up
+    for i in s:
+             ^
+NameError: name 's' is not defined. Did you mean: 'st'?
+>>> up()
+enter a sts
+Traceback (most recent call last):
+  File "<python-input-38>", line 1, in <module>
+    up()
+    ~~^^
+  File "<python-input-36>", line 4, in up
+    for i in s:
+             ^
+NameError: name 's' is not defined. Did you mean: 'st'?
+>>> up()
+enter a sthello
+Traceback (most recent call last):
+  File "<python-input-39>", line 1, in <module>
+    up()
+    ~~^^
+  File "<python-input-36>", line 4, in up
+    for i in s:
+             ^
+NameError: name 's' is not defined. Did you mean: 'st'?
+>>> def up():
+...     st=input('enter a st')
+...     out=''
+...     for i in st:
+...         if 'a'<=i<='z':
+...             out+=chr(ord(i)-32)
+...         else:
+...             out+=i
+...     print(out)
+...
+>>> up()
+enter a stshubham
+SHUBHAM
+>>>

@@ -1,0 +1,257 @@
+Python 3.13.12 (tags/v3.13.12:1cbe481, Feb  3 2026, 18:22:25) [MSC v.1944 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> #to modify local variable we use non local
+>>> a= 10
+>>> b =20
+>>> def outer():
+...     p=100
+...     q=200
+...     print(p,q)
+...     def inner():
+...         nonlocal p
+...         print(p,q)
+...         p=500
+...         print(p,q)
+...     inner()
+...     p=333
+...     print(p,q)
+... a=50
+...
+>>> print(a,b)
+50 20
+>>> outer()
+100 200
+100 200
+500 200
+333 200
+>>> def outer():
+...     p=100
+...     q=200
+...     print(p,q)
+...     def inner():
+...         global p
+...         print(p,q)
+...         p=500
+...         print(p,q)
+...     inner()
+...     p=333
+...     print(p,q)
+... a=50
+...
+>>> outer()
+100 200
+Traceback (most recent call last):
+  File "<python-input-7>", line 1, in <module>
+    outer()
+    ~~~~~^^
+  File "<python-input-6>", line 10, in outer
+    inner()
+    ~~~~~^^
+  File "<python-input-6>", line 7, in inner
+    print(p,q)
+          ^
+NameError: name 'p' is not defined
+>>> def outer():
+...     p=100
+...     q=200
+...     print(p,q)
+...     def inner():
+...         print(p,q)
+...         p=500
+...         print(p,q)
+...     inner()
+...     p=333
+...     print(p,q)
+... a=50
+...
+>>> outer()
+100 200
+Traceback (most recent call last):
+  File "<python-input-9>", line 1, in <module>
+    outer()
+    ~~~~~^^
+  File "<python-input-8>", line 9, in outer
+    inner()
+    ~~~~~^^
+  File "<python-input-8>", line 6, in inner
+    print(p,q)
+          ^
+UnboundLocalError: cannot access local variable 'p' where it is not associated with a value
+>>> def outer():
+...     p=100
+...     q=200
+...     print(p,q)
+...     def inner():
+...         globalp
+...         print(p,q)
+...         p=500
+...         print(p,q)
+...     inner()
+...     p=333
+...     print(p,q)
+... a=50
+...
+>>> outer()
+100 200
+Traceback (most recent call last):
+  File "<python-input-11>", line 1, in <module>
+    outer()
+    ~~~~~^^
+  File "<python-input-10>", line 10, in outer
+    inner()
+    ~~~~~^^
+  File "<python-input-10>", line 6, in inner
+    globalp
+NameError: name 'globalp' is not defined. Did you mean: 'globals'?
+>>> def outer():
+...     p=100
+...     q=200
+...     print(p,q)
+...     def inner():
+...         nonlocal p
+...         print(p,q)
+...         p=500
+...         print(p,q)
+...     inner()
+...     p=333
+...     print(p,q)
+... a=50
+...
+>>> outer()
+100 200
+100 200
+500 200
+333 200
+>>> #packing:- grouping the indivual values in the form of collection to pr\ovide security
+>>> #Note:- we can do packing in all collection,but our system will prefer \to dopacking in only tuple data type
+>>> #types of packing:- 1. Tuple/single packing 2.dictionary/doble packing
+>>> #tuple/single packing:- phenomina of grouping individuals by tuple
+>>> def fxname(var):
+...     sb
+...     fxname(var1,var2,var3,varn)
+...
+>>> def pack(*t):
+...     print(type(t))
+...     print(t)
+... pack(10,20,30,40,50)
+...
+...
+<class 'tuple'>
+(10, 20, 30, 40, 50)
+>>> #dictionary/double packing:- phenomia of grouing individuals with key,v\alue in the form of key-value pair having security
+>>> def fxname(**var):
+...     sd
+...     fxname(k1=v1,k2=v2,kn=vn)
+...
+>>> #note:- 1. keys should follow the rules of identifiers
+>>> # 2. keys should be of string datatype only
+>>> #3 keys should not enclose with quotes but values must be enclosed with\ quotes if it is string
+>>> def packing(**d)
+  File "<python-input-25>", line 1
+    def packing(**d)
+                    ^
+SyntaxError: expected ':'
+>>> def packing(**d):
+...     print(type(d))
+...     print(d)
+... packing(a=10,b=20,c=30,d=40)
+...
+<class 'dict'>
+{'a': 10, 'b': 20, 'c': 30, 'd': 40}
+>>> #advantage of packing over collection data type
+>>> # memory efficency , increase performance, lighter and faster
+>>> #Unpacking:- this is the phenomia dvided the collection and storing eac\h and every value present
+>>> def fxname(var1,var2,varn):
+...     sb
+... fxname(*collection)
+...
+Traceback (most recent call last):
+  File "<python-input-30>", line 3, in <module>
+    fxname(*collection)
+            ^^^^^^^^^^
+NameError: name 'collection' is not defined
+>>> def unpack(v1,v2,v3):
+...     print(v1,v2,v3)
+... unpack(*[10,20,30])
+... unpack(*'abc')
+...
+10 20 30
+a b c
+>>> #types of arguments:- 1. positional arguments 2. default arguments 3. keyword argument 4. variable length argument
+>>> #positinal arguments:- which are not created in function decleration
+>>> #note:
+>>> # it is compulsary to pass the value and it should follow same order
+>>> def add(a,b)
+  File "<python-input-36>", line 1
+    def add(a,b)
+                ^
+SyntaxError: expected ':'
+>>> def add(a,b):
+...     print(a+b)
+... add(10,20)
+...
+30
+>>> #default arguments:- they are present in fxn declertion, if the user is pasing the default value then default value of the variable will be replac\ed with new value
+>>> def add(a=0,b=0):
+...     print(a+b)
+... add(10,20)
+...
+30
+>>> #keyword arguments:- passing the key-value pair as the value to the argument. they are present in fxn call
+>>> def pack(*d)
+  File "<python-input-41>", line 1
+    def pack(*d)
+                ^
+SyntaxError: expected ':'
+>>> def pack(*d):
+...     print(type(d))
+...     print(d)
+... pack(a=10,b=20,c=30)
+...
+Traceback (most recent call last):
+  File "<python-input-42>", line 4, in <module>
+    pack(a=10,b=20,c=30)
+    ~~~~^^^^^^^^^^^^^^^^
+TypeError: pack() got an unexpected keyword argument 'a'
+>>> def pac(*d):
+...     print(type(d))
+...     print(d)
+... pac(a=10,b=20,c=30)
+...
+Traceback (most recent call last):
+  File "<python-input-43>", line 4, in <module>
+    pac(a=10,b=20,c=30)
+    ~~~^^^^^^^^^^^^^^^^
+TypeError: pac() got an unexpected keyword argument 'a'
+>>> def pac(**d):
+...     print(type(d))
+...     print(d)
+... pac(a=10,b=20,c=30)
+...
+<class 'dict'>
+{'a': 10, 'b': 20, 'c': 30}
+>>> #variable arguments:- these are capable of taking values from 1 to n number of inputs or values.they are present in fxn decleration
+>>> def packi(*t,**d):
+...     print(type(t))
+...     print(t)
+...     print(type(d))
+...     print(d)
+... pack(10,20,30,40,50,a=10,b=20,c=30)
+...
+Traceback (most recent call last):
+  File "<python-input-46>", line 6, in <module>
+    pack(10,20,30,40,50,a=10,b=20,c=30)
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: pack() got an unexpected keyword argument 'a'
+>>> def packi(*t,**d):
+...     print(type(t))
+...     print(t)
+...     print(type(d))
+...     print(d)
+... packi(10,20,30,40,50,a=10,b=20,c=30)
+...
+<class 'tuple'>
+(10, 20, 30, 40, 50)
+<class 'dict'>
+{'a': 10, 'b': 20, 'c': 30}
+>>>

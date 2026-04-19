@@ -1,0 +1,281 @@
+Python 3.13.12 (tags/v3.13.12:1cbe481, Feb  3 2026, 18:22:25) [MSC v.1944 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> #wap to input = [12,'program',4+2j,False,'Holiday']
+>>> #output ={'program':'oa','Holiday':'oia'}
+>>> l=eval(input('enter a value'))
+enter a value[12,'program',4+2j,False,'Holiday']
+>>> a ={}
+>>> for i in l:
+...     if type(i)==str:
+...         v=''
+...         for b in i:
+...             if b in "aieouAIEOU":
+...                 v+=b
+...             a[i]=v
+... print(a)
+...
+{'program': 'oa', 'Holiday': 'oia'}
+>>> #function-the predefined by the developers
+>>>  #2types - user defined and inbuilt
+>>>   #in built fxn of -dictionary:
+>>>  #key(),values(),items(),pop(),popitem(),clear()
+>>> a={'a':10,'b':20,'c':30}
+>>> a.keys()
+dict_keys(['a', 'b', 'c'])
+>>> a.values()
+dict_values([10, 20, 30])
+>>> a.pop('a')
+10
+>>> a.popitem()
+('c', 30)
+>>> a.items()
+dict_items([('b', 20)])
+>>> a.clear()
+>>> a
+{}
+>>> #user defined fxn->
+>>> #syntax :- def fxname(arugument):
+>>>         #    statement block or return value
+>>> #fxn call:- fxname(values)
+>>> def sum():
+...     a=int(input('enter value 1'))
+...     b=int(input('enter value 2'))
+...     print(a+b)
+...
+>>> sum()
+enter value 112
+enter value 212
+24
+>>> #types:-
+>>> #without arguments and without return
+>>> #with aruguments and without return
+>>> #without arguments and with return
+>>> #with both arguments and return
+>>> #type1
+>>> def fxname():
+...     sb
+...
+>>> fxname()
+Traceback (most recent call last):
+  File "<python-input-30>", line 1, in <module>
+    fxname()
+    ~~~~~~^^
+  File "<python-input-29>", line 2, in fxname
+    sb
+NameError: name 'sb' is not defined. Did you mean: 'b'?
+>>> #def fxname():
+...     #statement block
+...
+>>> #ex:-
+>>> #wap to convert a str in uppercase
+>>> def u():
+...     s= input()
+...     print(s.upper())
+...
+>>> u()
+
+
+>>> u()
+shubham
+SHUBHAM
+>>> def up():
+...     st=input("enter a value")
+...     aa = ''
+...     for i in s :
+...         if 'a'<=i<='z':
+...             aa+=char(ord(i)-32)
+...         else:
+...             aa+=i
+...     print(aa)
+...
+>>> up()
+enter a valueshubham
+Traceback (most recent call last):
+  File "<python-input-38>", line 1, in <module>
+    up()
+    ~~^^
+  File "<python-input-37>", line 4, in up
+    for i in s :
+             ^
+NameError: name 's' is not defined. Did you mean: 'st'?
+>>> def up():
+...     st=input("enter a value")
+...     aa = ''
+...     for i in st :
+...         if 'a'<=i<='z':
+...             aa+=char(ord(i)-32)
+...         else:
+...             aa+=i
+...     print(aa)
+...
+>>> up()
+enter a valueshubham
+Traceback (most recent call last):
+  File "<python-input-40>", line 1, in <module>
+    up()
+    ~~^^
+  File "<python-input-39>", line 6, in up
+    aa+=char(ord(i)-32)
+        ^^^^
+NameError: name 'char' is not defined. Did you mean: 'chr'?
+>>> def up():
+...     st=input("enter a value")
+...     aa = ''
+...     for i in st :
+...         if 'a'<=i<='z':
+...             aa+=chr(ord(i)-32)
+...         else:
+...             aa+=i
+...     print(aa)
+...
+>>> up()
+enter a valueshubham
+SHUBHAM
+>>> #wap to count no of occurance of character in a string
+>>> def countst():
+...     str=input()
+...     ch=input()
+...     count = 0
+...     for in str:
+...         if i==ch:
+...             count+=1
+...     print(count)
+...
+  File "<python-input-44>", line 5
+    for in str:
+        ^^
+SyntaxError: invalid syntax
+>>> def countst():
+...     str=input()
+...     ch=input()
+...     count = 0
+...     for i in str:
+...         if i==ch:
+...             count+=1
+...     print(count)
+...
+>>> countstr()
+Traceback (most recent call last):
+  File "<python-input-46>", line 1, in <module>
+    countstr()
+    ^^^^^^^^
+NameError: name 'countstr' is not defined. Did you mean: 'countst'?
+>>> countst()
+
+shubham
+0
+>>> countst()
+shubham is a boy
+a
+2
+>>> #type2
+>>> def fxname(a,b):
+...     sb
+...
+>>> def add(a,b):
+...     print(a+b)
+...
+>>> add
+<function add at 0x000002144172DC60>
+>>> add()
+Traceback (most recent call last):
+  File "<python-input-53>", line 1, in <module>
+    add()
+    ~~~^^
+TypeError: add() missing 2 required positional arguments: 'a' and 'b'
+>>> add(1,2)
+3
+>>> #wap to covert str to upper case
+>>> def up(stri):
+...     aa = ''
+...     for i in stri :
+...         if 'a'<=i<='z':
+...             aa+=char(ord(i)-32)
+...         else:
+...             aa+=i
+...     print(aa)
+...
+>>> def up(stri):
+...     aa = ''
+...     for i in stri :
+...         if 'a'<=i<='z':
+...             aa+=chr(ord(i)-32)
+...         else:
+...             aa+=i
+...     print(aa)
+...
+>>> up(shubham)
+Traceback (most recent call last):
+  File "<python-input-58>", line 1, in <module>
+    up(shubham)
+       ^^^^^^^
+NameError: name 'shubham' is not defined
+>>> def up(stri,aa):
+...     for i in stri :
+...         if 'a'<=i<='z':
+...             aa+=char(ord(i)-32)
+...         else:
+...             aa+=i
+...     print(aa)
+...
+>>> def up(stri,aa):
+...     for i in stri :
+...         if 'a'<=i<='z':
+...             aa+=chr(ord(i)-32)
+...         else:
+...             aa+=i
+...     print(aa)
+...
+>>> up(shubham,'')
+Traceback (most recent call last):
+  File "<python-input-61>", line 1, in <module>
+    up(shubham,'')
+       ^^^^^^^
+NameError: name 'shubham' is not defined
+>>> def ups(stri,aa):
+...     for i in stri :
+...         if 'a'<=i<='z':
+...             aa+=char(ord(i)-32)
+...         else:
+...             aa+=i
+...     print(aa)
+...
+>>> ups('shubham','')
+Traceback (most recent call last):
+  File "<python-input-63>", line 1, in <module>
+    ups('shubham','')
+    ~~~^^^^^^^^^^^^^^
+  File "<python-input-62>", line 4, in ups
+    aa+=char(ord(i)-32)
+        ^^^^
+NameError: name 'char' is not defined. Did you mean: 'chr'?
+>>> def ups(stri,aa):
+...     for i in stri :
+...         if 'a'<=i<='z':
+...             aa+=chr(ord(i)-32)
+...         else:
+...             aa+=i
+...     print(aa)
+...
+>>> ups('shubham','')
+SHUBHAM
+>>> def countst(stri,cha,c):
+...     for i in str:
+...         if i==ch:
+...             count+=1
+...     print(count)
+...
+>>> def ctst(stri,cha,c):
+...     for i in stri:
+...         if i==cha:
+...             c+=1
+...     print(c)
+...
+...
+>>> ctst('shubham','a',0)
+1
+>>> ctst(input('enter string'),input('enter a char'),0)
+enter stringshubham is a good boy
+enter a charo
+3
+>>>

@@ -1,0 +1,146 @@
+Python 3.13.12 (tags/v3.13.12:1cbe481, Feb  3 2026, 18:22:25) [MSC v.1944 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> #type3-
+>>> def fxname():
+...     sb
+...     return value
+... print(fxname())
+...
+Traceback (most recent call last):
+  File "<python-input-1>", line 4, in <module>
+    print(fxname())
+          ~~~~~~^^
+  File "<python-input-1>", line 2, in fxname
+    sb
+NameError: name 'sb' is not defined
+>>> def sum():
+...     a = int(input("enter a"))
+...     b = int(input("enter b"))
+...     return a+b
+... print(sum())
+...
+enter a23
+enter b12
+35
+>>>  #wap to convert the string to upper
+>>> def up():
+...     s= input("enter a string")
+...     out=''
+...     for i in s:
+...         if 'a'<=i<='z':
+...             out+=chr(ord(i)-32)
+...         else:
+...             out+=i
+...     return(out)
+... print(up())
+...
+enter a stringshubham
+SHUBHAM
+>>> #type4-                    ^
+>>> def fxname(a,b,c):
+...     sb
+...     return value
+... print(fxname())
+...
+Traceback (most recent call last):
+  File "<python-input-9>", line 4, in <module>
+    print(fxname())
+          ~~~~~~^^
+TypeError: fxname() missing 3 required positional arguments: 'a', 'b', and 'c'
+>>> #wap to covert the str to uppercasse
+>>> def ups(st,out):
+...     for i in st:
+...         if 'a'<=i<='z':
+...             out+=chr(ord(i)-32)
+...         else:
+...             out+=i
+...     return(out)
+... print(ups())
+...
+Traceback (most recent call last):
+  File "<python-input-11>", line 8, in <module>
+    print(ups())
+          ~~~^^
+TypeError: ups() missing 2 required positional arguments: 'st' and 'out'
+>>> def ups(st,out):
+...     for i in st:
+...         if 'a'<=i<='z':
+...             out+=chr(ord(i)-32)
+...         else:
+...             out+=i
+...     return(out)
+... print(ups(st,out))
+...
+Traceback (most recent call last):
+  File "<python-input-12>", line 8, in <module>
+    print(ups(st,out))
+              ^^
+NameError: name 'st' is not defined. Did you mean: 'set'?
+>>> def ups(st,out):
+...     for i in st:
+...         if 'a'<=i<='z':
+...             out+=chr(ord(i)-32)
+...         else:
+...             out+=i
+...     return(out)
+... print(ups(input(),""))
+...
+shubham
+SHUBHAM
+>>> #global variables are created in the main space and can be acess
+>>> #ex-
+>>> a=10,b=20
+  File "<python-input-16>", line 1
+    a=10,b=20
+    ^^^^
+SyntaxError: invalid syntax. Maybe you meant '==' or ':=' instead of '='?
+>>> a=10
+>>> b=20
+>>> sum()
+enter ae
+Traceback (most recent call last):
+  File "<python-input-19>", line 1, in <module>
+    sum()
+    ~~~^^
+  File "<python-input-2>", line 2, in sum
+    a = int(input("enter a"))
+ValueError: invalid literal for int() with base 10: 'e'
+>>> a=10
+>>> b=20
+>>> def sample():
+...     print(a+b)
+...     print(a,b)
+... print(a,b)
+...
+10 20
+>>> sample()
+30
+10 20
+>>> b=50
+>>> print(a,b)
+10 50
+>>> a=10
+>>> b=20
+>>> def sam():
+...     global a
+...     print(a+b)
+...     a=30
+...     print(a,b)
+... print(a,b)
+...
+10 20
+>>> sum()
+enter a10
+enter b21
+31
+>>> sam()
+30
+30 20
+>>> b=50
+>>> print(a,b)
+30 50
+>>> a=10
+>>> print(a,b)
+10 50
+>>> #local variable -> are created in the method area and can be access and modified in the same space (but not in nested)
+>>>
